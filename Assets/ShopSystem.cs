@@ -65,41 +65,85 @@ public class ShopSystem : MonoBehaviour
         {
             ShipStats.maxBattery += 10f;
             maxBatteryLvl++;
+            maxBatteryLvlText.text = maxBatteryLvl + " / " + maxBatteryLvlMax;
+            Debug.Log(ShipStats.maxBattery);
         }
     }
 
     void oxygen()
     {
-
+        if (maxOxygenLvl != maxOxygenLvl)
+        {
+            ShipStats.maxOxygen += 10f;
+            maxOxygenLvl++;
+            maxOxygenLvlText.text = maxOxygenLvl + " / " + maxOxygenLvlMax;
+            Debug.Log(ShipStats.maxOxygen);
+        }
     }
 
     void regen()
     {
-
+        if (oxygenRegenLvl != oxygenRegenLvlMax)
+        {
+            ShipStats.oxygenRegen += 10f;
+            oxygenRegenLvl++;
+            oxygenRegenLvlText.text = oxygenRegenLvl + " / " + oxygenRegenLvlMax;
+            Debug.Log(ShipStats.oxygenRegen);
+        }
     }
 
     void decay()
     {
-
+        if (oxygenDecayLvl != oxygenDecayLvlMax)
+        {
+            ShipStats.oxygenDecay += 10f;
+            oxygenDecayLvl++;
+            oxygenDecayLvlText.text = oxygenDecayLvl + " / " + oxygenDecayLvlMax;
+            Debug.Log(ShipStats.oxygenDecay);
+        }
     }
 
     void speed()
     {
-
+        if (healthLvl != healthLvlMax)
+        {
+            ShipStats.subHealth += 10f;
+            healthLvl++;
+            healthLvlText.text = healthLvl + " / " + healthLvlMax;
+            Debug.Log(ShipStats.subHealth);
+        }
     }
 
     void spotlight()
     {
-
+        if (healthLvl != healthLvlMax)
+        {
+            ShipStats.subHealth += 10f;
+            healthLvl++;
+            healthLvlText.text = healthLvl + " / " + healthLvlMax;
+            Debug.Log(ShipStats.subHealth);
+        }
     }
 
     void aura()
     {
-
+        if (healthLvl != healthLvlMax)
+        {
+            ShipStats.subHealth += 10f;
+            healthLvl++;
+            healthLvlText.text = healthLvl + " / " + healthLvlMax;
+            Debug.Log(ShipStats.subHealth);
+        }
     }
 
     void money()
     {
-
+        if (healthLvl != healthLvlMax)
+        {
+            ShipStats.subHealth += 10f;
+            healthLvl++;
+            healthLvlText.text = healthLvl + " / " + healthLvlMax;
+            Debug.Log(ShipStats.subHealth);
+        }
     }
 }
