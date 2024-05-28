@@ -18,7 +18,7 @@ public class nextscene : MonoBehaviour
     {
         if (collision.gameObject.tag == "Scene2")
         {
-            SceneManager.LoadSceneAsync(1);
+            SceneManager.LoadSceneAsync(2);
         }
     }
 
