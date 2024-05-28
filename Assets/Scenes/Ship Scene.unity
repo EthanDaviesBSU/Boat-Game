@@ -4471,7 +4471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -572, y: 5.28}
+  m_AnchoredPosition: {x: -572, y: 5.279999}
   m_SizeDelta: {x: -334.07, y: 777.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505786980
@@ -5825,7 +5825,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -379.71, y: 696}
+  m_AnchoredPosition: {x: -379.70996, y: 696}
   m_SizeDelta: {x: -847.95, y: -1465.47}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1915045166
@@ -6121,6 +6121,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2020350822}
   m_CullTransparentMesh: 1
+--- !u!1 &2027855253
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2027855255}
+  - component: {fileID: 2027855254}
+  m_Layer: 0
+  m_Name: ShopSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2027855254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027855253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d898f194abe354041af7b9daf545b98a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sub: {fileID: 0}
+--- !u!4 &2027855255
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2027855253}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2101441043
 GameObject:
   m_ObjectHideFlags: 0
@@ -6451,3 +6496,4 @@ SceneRoots:
   - {fileID: 1442012794}
   - {fileID: 1236070704}
   - {fileID: 1357605403}
+  - {fileID: 2027855255}

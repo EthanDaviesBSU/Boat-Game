@@ -20,11 +20,17 @@ public class MenuSystem : MonoBehaviour
 
     void StartButton()
     {
+        InitialStats();
         SceneManager.LoadSceneAsync(1);
     }
 
     void ExitButton()
     {
         Application.Quit();
+    }
+
+    void InitialStats()
+    {
+        MoveLight.maxBattery = ;
     }
 }
