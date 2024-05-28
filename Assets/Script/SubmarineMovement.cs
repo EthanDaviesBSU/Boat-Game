@@ -60,11 +60,11 @@ public class SubmarineMovement : MonoBehaviour
             transform.position = new Vector3(transform.position.x, 20.0f, transform.position.z);
         }
 
-        body.velocity = new Vector2 (moveHorizontal*moveSpeed*Time.deltaTime, moveVertical*moveSpeed*Time.deltaTime);
+        body.velocity = new Vector2 (moveHorizontal*ShipStats.moveSpeed*Time.deltaTime, moveVertical*ShipStats.moveSpeed*Time.deltaTime);
 
-       if (body.velocity.magnitude > limitVelocity)
+       if (body.velocity.magnitude > ShipStats.limitVelocity)
        {
-           body.velocity = Vector3.ClampMagnitude(body.velocity, limitVelocity);
+           body.velocity = Vector3.ClampMagnitude(body.velocity, ShipStats.limitVelocity);
        }
     }
 }

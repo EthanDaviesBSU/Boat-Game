@@ -29,10 +29,10 @@ public class MoveLight : MonoBehaviour
         subLight = GetComponent<Light2D>();
         player = GetComponent<Transform>();
 
-        currentBattery = maxBattery;
+        currentBattery = ShipStats.maxBattery;
 
-        batterySlider.maxValue = maxBattery;
-        batterySlider.value = maxBattery;
+        batterySlider.maxValue = ShipStats.maxBattery;
+        batterySlider.value = ShipStats.maxBattery;
     }
 
     // Update is called once per frame
@@ -58,7 +58,7 @@ public class MoveLight : MonoBehaviour
 
         if(player.position.y < 20)
         {
-            currentBattery -= batteryDecay * Time.deltaTime * (subLight.pointLightOuterRadius / 10);
+            currentBattery -= ShipStats.batteryDecay * Time.deltaTime * (subLight.pointLightOuterRadius / 10);
         }
 
         if(currentBattery <= 0)

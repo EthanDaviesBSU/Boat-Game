@@ -18,9 +18,9 @@ public class OxygenSystem : MonoBehaviour
     void Start()
     {
         player = GetComponent<Transform>();
-        currentOxygen = maxOxygen;
-        oxygenSlider.maxValue = maxOxygen;
-        oxygenSlider.value = maxOxygen;
+        currentOxygen = ShipStats.maxOxygen;
+        oxygenSlider.maxValue = ShipStats.maxOxygen;
+        oxygenSlider.value = ShipStats.maxOxygen;
     }
 
     // Update is called once per frame
@@ -28,11 +28,11 @@ public class OxygenSystem : MonoBehaviour
     {
         if(player.position.y < 20)
         {
-            currentOxygen -= oxygenDecay * Time.deltaTime;
+            currentOxygen -= ShipStats.oxygenDecay * Time.deltaTime;
         }
-        else if(player.position.y >= 20 && currentOxygen != maxOxygen)
+        else if(player.position.y >= 20 && currentOxygen != ShipStats.maxOxygen)
         {
-            currentOxygen += oxygenRegen * Time.deltaTime;
+            currentOxygen += ShipStats.oxygenRegen * Time.deltaTime;
         }
         
         oxygenSlider.value = currentOxygen;

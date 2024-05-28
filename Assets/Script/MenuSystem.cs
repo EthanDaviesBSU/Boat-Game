@@ -31,6 +31,6 @@ public class MenuSystem : MonoBehaviour
 
     void InitialStats()
     {
-        MoveLight.maxBattery = ;
+        
     }
 }

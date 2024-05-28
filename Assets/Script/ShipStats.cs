@@ -14,7 +14,6 @@ public class ShipStats : MonoBehaviour
     public static float maxOxygen;
     public static float moneyMultiplier;
 
-
     // Start is called before the first frame update
     void Start()
     {
