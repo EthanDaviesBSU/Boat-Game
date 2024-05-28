@@ -582,7 +582,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: -144}
+  m_AnchoredPosition: {x: -0.00012207031, y: -144}
   m_SizeDelta: {x: -88.53, y: -739.42}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &96576056
@@ -4471,7 +4471,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -572, y: 5.279999}
+  m_AnchoredPosition: {x: -572, y: 5.2800293}
   m_SizeDelta: {x: -334.07, y: 777.99}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1505786980
@@ -6159,15 +6159,6 @@ MonoBehaviour:
   spotlightButton: {fileID: 453235466}
   auraButton: {fileID: 1551650560}
   moneyMultiplierButton: {fileID: 1371887777}
-  healthLvl: 1
-  maxBatteryLvl: 1
-  maxOxygenLvl: 1
-  oxygenRegenLvl: 1
-  oxygenDecayLvl: 1
-  moveSpeedLvl: 1
-  spotlightLvl: 1
-  auraLvl: 1
-  moneyMultiplierLvl: 1
   healthLvlMax: 10
   maxBatteryLvlMax: 10
   maxOxygenLvlMax: 10
@@ -6186,6 +6177,7 @@ MonoBehaviour:
   spotlightLvlText: {fileID: 1695079271}
   auraLvlText: {fileID: 1883597866}
   moneyMultiplierLvlText: {fileID: 134228297}
+  totalMoneyText: {fileID: 1200100633}
 --- !u!4 &2027855255
 Transform:
   m_ObjectHideFlags: 0

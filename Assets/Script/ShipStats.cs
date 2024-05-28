@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ShipStats : MonoBehaviour
 {
-
     public static float maxBattery = 200f;
     public static float batteryDecay = 2f;
     public static float moveSpeed = 1000f;
@@ -16,5 +15,5 @@ public class ShipStats : MonoBehaviour
     public static float subHealth = 100f;
     public static float spotlightRange = 15f;
     public static float auraRange = 4f;
-
+    public static float totalMoney = 0f;
 }

@@ -19,6 +19,8 @@ public class ShopSystem : MonoBehaviour
     public TMP_Text healthLvlText, maxBatteryLvlText, maxOxygenLvlText, oxygenRegenLvlText, oxygenDecayLvlText,
         moveSpeedLvlText, spotlightLvlText, auraLvlText, moneyMultiplierLvlText;
 
+    public TMP_Text totalMoneyText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +42,7 @@ public class ShopSystem : MonoBehaviour
         spotlightLvlText.text = spotlightLvl + " / " + spotlightLvlMax;
         auraLvlText.text = auraLvl + " / " + auraLvlMax;
         moneyMultiplierLvlText.text = moneyMultiplierLvl + " / " + moneyMultiplierLvlMax;
+        totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
     }
 
     // Update is called once per frame
@@ -50,100 +53,110 @@ public class ShopSystem : MonoBehaviour
 
     void health()
     {
-        if (healthLvl != healthLvlMax)
+        if (healthLvl != healthLvlMax && (ShipStats.totalMoney - 50) >= 0)
         {
             ShipStats.subHealth += 10f;
             healthLvl++;
             healthLvlText.text = healthLvl + " / " + healthLvlMax;
+            ShipStats.totalMoney -= 50f;
+            totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.subHealth);
         }
     }
 
     void battery()
     {
-        if (maxBatteryLvl != maxBatteryLvlMax)
+        if (maxBatteryLvl != maxBatteryLvlMax && (ShipStats.totalMoney - 50) >= 0)
         {
             ShipStats.maxBattery += 10f;
             maxBatteryLvl++;
             maxBatteryLvlText.text = maxBatteryLvl + " / " + maxBatteryLvlMax;
+            ShipStats.totalMoney -= 50f;
             Debug.Log(ShipStats.maxBattery);
         }
     }
 
     void oxygen()
     {
-        if (maxOxygenLvl != maxOxygenLvlMax)
+        if (maxOxygenLvl != maxOxygenLvlMax && (ShipStats.totalMoney - 50) >= 0)
         {
             ShipStats.maxOxygen += 10f;
             maxOxygenLvl++;
             maxOxygenLvlText.text = maxOxygenLvl + " / " + maxOxygenLvlMax;
+            ShipStats.totalMoney -= 50f;
             Debug.Log(ShipStats.maxOxygen);
         }
     }
 
     void regen()
     {
-        if (oxygenRegenLvl != oxygenRegenLvlMax)
+        if (oxygenRegenLvl != oxygenRegenLvlMax && (ShipStats.totalMoney - 100) >= 0)
         {
             ShipStats.oxygenRegen += 10f;
             oxygenRegenLvl++;
             oxygenRegenLvlText.text = oxygenRegenLvl + " / " + oxygenRegenLvlMax;
+            ShipStats.totalMoney -= 100f;
             Debug.Log(ShipStats.oxygenRegen);
         }
     }
 
     void decay()
     {
-        if (oxygenDecayLvl != oxygenDecayLvlMax)
+        if (oxygenDecayLvl != oxygenDecayLvlMax && (ShipStats.totalMoney - 100) >= 0)
         {
             ShipStats.oxygenDecay += 10f;
             oxygenDecayLvl++;
             oxygenDecayLvlText.text = oxygenDecayLvl + " / " + oxygenDecayLvlMax;
+            ShipStats.totalMoney -= 100f;
             Debug.Log(ShipStats.oxygenDecay);
         }
     }
 
     void speed()
     {
-        if (moveSpeedLvl != moveSpeedLvlMax)
+        if (moveSpeedLvl != moveSpeedLvlMax && (ShipStats.totalMoney - 200) >= 0)
         {
             ShipStats.moveSpeed += 100f;
             ShipStats.limitVelocity += 1f;
             moveSpeedLvl++;
             moveSpeedLvlText.text = moveSpeedLvl + " / " + moveSpeedLvlMax;
+            ShipStats.totalMoney -= 200f;
             Debug.Log(ShipStats.moveSpeed);
         }
     }
 
     void spotlight()
     {
-        if (spotlightLvl != spotlightLvlMax)
+        if (spotlightLvl != spotlightLvlMax && (ShipStats.totalMoney - 200) >= 0)
         {
             ShipStats.spotlightRange += 10f;
             spotlightLvl++;
             spotlightLvlText.text = spotlightLvl + " / " + spotlightLvlMax;
+            ShipStats.totalMoney -= 200f;
             Debug.Log(ShipStats.spotlightRange);
         }
     }
 
     void aura()
     {
-        if (auraLvl != auraLvlMax)
+        if (auraLvl != auraLvlMax && (ShipStats.totalMoney - 200) >= 0)
         {
             ShipStats.auraRange += 10f;
             auraLvl++;
             auraLvlText.text = auraLvl + " / " + auraLvlMax;
+            ShipStats.totalMoney -= 200f;
             Debug.Log(ShipStats.auraRange);
         }
     }
 
     void money()
     {
-        if (moneyMultiplierLvl != moneyMultiplierLvlMax)
+        if (moneyMultiplierLvl != moneyMultiplierLvlMax && (ShipStats.totalMoney - 500) >= 0)
         {
             ShipStats.moneyMultiplier += 10f;
             moneyMultiplierLvl++;
             moneyMultiplierLvlText.text = moneyMultiplierLvl + " / " + moneyMultiplierLvlMax;
+            ShipStats.totalMoney -= 500f;
             Debug.Log(ShipStats.moneyMultiplier);
         }
     }
