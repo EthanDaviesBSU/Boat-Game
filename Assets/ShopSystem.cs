@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class ShopSystem : MonoBehaviour
 {
 
     public Button healthButton, maxBatteryButton, maxOxygenButton, oxygenRegenButton, oxygenDecayButton, 
         moveSpeedButton, spotlightButton, auraButton, moneyMultiplierButton;
+
+    public Button diveButton, exitButton;
 
     private int healthLvl = 0, maxBatteryLvl = 0, maxOxygenLvl = 0, oxygenRegenLvl = 0, oxygenDecayLvl = 0, moveSpeedLvl = 0,
         spotlightLvl = 0, auraLvl = 0, moneyMultiplierLvl = 0;
@@ -33,6 +36,8 @@ public class ShopSystem : MonoBehaviour
         spotlightButton.onClick.AddListener(spotlight);
         auraButton.onClick.AddListener(aura);
         moneyMultiplierButton.onClick.AddListener(money);
+        diveButton.onClick.AddListener(dive);
+        exitButton.onClick.AddListener(closeGame);
         healthLvlText.text = healthLvl + " / " + healthLvlMax;
         maxBatteryLvlText.text = maxBatteryLvl + " / " + maxBatteryLvlMax;
         maxOxygenLvlText.text = maxOxygenLvl + " / " + maxOxygenLvlMax;
@@ -159,5 +164,15 @@ public class ShopSystem : MonoBehaviour
             ShipStats.totalMoney -= 500f;
             Debug.Log(ShipStats.moneyMultiplier);
         }
+    }
+
+    void dive()
+    {
+        SceneManager.LoadSceneAsync(2);
+    }
+
+    void closeGame()
+    {
+        Application.Quit();;
     }
 }

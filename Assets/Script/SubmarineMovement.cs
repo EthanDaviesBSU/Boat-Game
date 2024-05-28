@@ -18,13 +18,13 @@ public class SubmarineMovement : MonoBehaviour
 
     public float limitVelocity = 10f;
 
-    public AudioSource propeller;
+    //public AudioSource propeller;
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        propeller = GetComponent<AudioSource>();
+        //propeller = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,14 +43,14 @@ public class SubmarineMovement : MonoBehaviour
             isMoving = true;
         }
 
-        if (isMoving )
-        {
-            propeller.Play();
-        }
-        else
-        {
-            propeller.Stop();
-        }
+        // if (isMoving )
+        // {
+        //     propeller.Play();
+        // }
+        // else
+        // {
+        //     propeller.Stop();
+        // }
     }
 
     void FixedUpdate()
