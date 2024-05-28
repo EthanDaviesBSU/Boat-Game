@@ -10,7 +10,7 @@ public class ShopSystem : MonoBehaviour
     public Button healthButton, maxBatteryButton, maxOxygenButton, oxygenRegenButton, oxygenDecayButton, 
         moveSpeedButton, spotlightButton, auraButton, moneyMultiplierButton;
 
-    public int healthLvl = 1, maxBatteryLvl = 1, maxOxygenLvl = 1, oxygenRegenLvl = 1, oxygenDecayLvl = 1, moveSpeedLvl = 1,
+    private int healthLvl = 1, maxBatteryLvl = 1, maxOxygenLvl = 1, oxygenRegenLvl = 1, oxygenDecayLvl = 1, moveSpeedLvl = 1,
         spotlightLvl = 1, auraLvl = 1, moneyMultiplierLvl = 1;
 
     public int healthLvlMax = 10, maxBatteryLvlMax = 10, maxOxygenLvlMax = 10, oxygenRegenLvlMax = 5, oxygenDecayLvlMax = 5,
@@ -31,6 +31,15 @@ public class ShopSystem : MonoBehaviour
         spotlightButton.onClick.AddListener(spotlight);
         auraButton.onClick.AddListener(aura);
         moneyMultiplierButton.onClick.AddListener(money);
+        healthLvlText.text = healthLvl + " / " + healthLvlMax;
+        maxBatteryLvlText.text = healthLvl + " / " + healthLvlMax;
+        maxOxygenLvlText.text = healthLvl + " / " + healthLvlMax;
+        oxygenRegenLvlText.text = healthLvl + " / " + healthLvlMax;
+        oxygenDecayLvlText.text = healthLvl + " / " + healthLvlMax;
+        moveSpeedLvlText.text = healthLvl + " / " + healthLvlMax;
+        spotlightLvlText.text = healthLvl + " / " + healthLvlMax;
+        auraLvlText.text = healthLvl + " / " + healthLvlMax;
+        moneyMultiplierLvlText.text = healthLvl + " / " + healthLvlMax;
     }
 
     // Update is called once per frame
@@ -41,13 +50,21 @@ public class ShopSystem : MonoBehaviour
 
     void health()
     {
-        ShipStats.subHealth += 10f;
-        healthLvl++;
+        if (healthLvl != healthLvlMax)
+        {
+            ShipStats.subHealth += 10f;
+            healthLvl++;
+            healthLvlText.text = healthLvl + " / " + healthLvlMax;
+        }
     }
 
     void battery()
     {
-
+        if (maxBatteryLvl != maxBatteryLvlMax)
+        {
+            ShipStats.maxBattery += 10f;
+            maxBatteryLvl++;
+        }
     }
 
     void oxygen()

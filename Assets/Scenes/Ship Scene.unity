@@ -6153,12 +6153,39 @@ MonoBehaviour:
   healthButton: {fileID: 1066474963}
   maxBatteryButton: {fileID: 1410581302}
   maxOxygenButton: {fileID: 812057509}
-  oxygenDecaybutton: {fileID: 1448194065}
   oxygenRegenButton: {fileID: 1167793423}
+  oxygenDecayButton: {fileID: 1448194065}
   moveSpeedButton: {fileID: 2020350824}
   spotlightButton: {fileID: 453235466}
   auraButton: {fileID: 1551650560}
   moneyMultiplierButton: {fileID: 1371887777}
+  healthLvl: 1
+  maxBatteryLvl: 1
+  maxOxygenLvl: 1
+  oxygenRegenLvl: 1
+  oxygenDecayLvl: 1
+  moveSpeedLvl: 1
+  spotlightLvl: 1
+  auraLvl: 1
+  moneyMultiplierLvl: 1
+  healthLvlMax: 10
+  maxBatteryLvlMax: 10
+  maxOxygenLvlMax: 10
+  oxygenRegenLvlMax: 5
+  oxygenDecayLvlMax: 5
+  moveSpeedLvlMax: 5
+  spotlightLvlMax: 5
+  auraLvlMax: 5
+  moneyMultiplierLvlMax: 5
+  healthLvlText: {fileID: 810860325}
+  maxBatteryLvlText: {fileID: 1886636721}
+  maxOxygenLvlText: {fileID: 596402037}
+  oxygenRegenLvlText: {fileID: 16547836}
+  oxygenDecayLvlText: {fileID: 1535343760}
+  moveSpeedLvlText: {fileID: 1388326274}
+  spotlightLvlText: {fileID: 1695079271}
+  auraLvlText: {fileID: 1883597866}
+  moneyMultiplierLvlText: {fileID: 134228297}
 --- !u!4 &2027855255
 Transform:
   m_ObjectHideFlags: 0
