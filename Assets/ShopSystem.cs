@@ -10,8 +10,8 @@ public class ShopSystem : MonoBehaviour
     public Button healthButton, maxBatteryButton, maxOxygenButton, oxygenRegenButton, oxygenDecayButton, 
         moveSpeedButton, spotlightButton, auraButton, moneyMultiplierButton;
 
-    private int healthLvl = 1, maxBatteryLvl = 1, maxOxygenLvl = 1, oxygenRegenLvl = 1, oxygenDecayLvl = 1, moveSpeedLvl = 1,
-        spotlightLvl = 1, auraLvl = 1, moneyMultiplierLvl = 1;
+    private int healthLvl = 0, maxBatteryLvl = 0, maxOxygenLvl = 0, oxygenRegenLvl = 0, oxygenDecayLvl = 0, moveSpeedLvl = 0,
+        spotlightLvl = 0, auraLvl = 0, moneyMultiplierLvl = 0;
 
     public int healthLvlMax = 10, maxBatteryLvlMax = 10, maxOxygenLvlMax = 10, oxygenRegenLvlMax = 5, oxygenDecayLvlMax = 5,
         moveSpeedLvlMax = 5, spotlightLvlMax = 5, auraLvlMax = 5, moneyMultiplierLvlMax = 5;
@@ -32,14 +32,14 @@ public class ShopSystem : MonoBehaviour
         auraButton.onClick.AddListener(aura);
         moneyMultiplierButton.onClick.AddListener(money);
         healthLvlText.text = healthLvl + " / " + healthLvlMax;
-        maxBatteryLvlText.text = healthLvl + " / " + healthLvlMax;
-        maxOxygenLvlText.text = healthLvl + " / " + healthLvlMax;
-        oxygenRegenLvlText.text = healthLvl + " / " + healthLvlMax;
-        oxygenDecayLvlText.text = healthLvl + " / " + healthLvlMax;
-        moveSpeedLvlText.text = healthLvl + " / " + healthLvlMax;
-        spotlightLvlText.text = healthLvl + " / " + healthLvlMax;
-        auraLvlText.text = healthLvl + " / " + healthLvlMax;
-        moneyMultiplierLvlText.text = healthLvl + " / " + healthLvlMax;
+        maxBatteryLvlText.text = maxBatteryLvl + " / " + maxBatteryLvlMax;
+        maxOxygenLvlText.text = maxOxygenLvl + " / " + maxOxygenLvlMax;
+        oxygenRegenLvlText.text = oxygenRegenLvl + " / " + oxygenRegenLvlMax;
+        oxygenDecayLvlText.text = oxygenDecayLvl + " / " + oxygenDecayLvlMax;
+        moveSpeedLvlText.text = moveSpeedLvl + " / " + moveSpeedLvlMax;
+        spotlightLvlText.text = spotlightLvl + " / " + spotlightLvlMax;
+        auraLvlText.text = auraLvl + " / " + auraLvlMax;
+        moneyMultiplierLvlText.text = moneyMultiplierLvl + " / " + moneyMultiplierLvlMax;
     }
 
     // Update is called once per frame
@@ -55,6 +55,7 @@ public class ShopSystem : MonoBehaviour
             ShipStats.subHealth += 10f;
             healthLvl++;
             healthLvlText.text = healthLvl + " / " + healthLvlMax;
+            Debug.Log(ShipStats.subHealth);
         }
     }
 
