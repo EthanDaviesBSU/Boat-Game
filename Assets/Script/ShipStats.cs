@@ -5,24 +5,14 @@ using UnityEngine;
 public class ShipStats : MonoBehaviour
 {
 
-    public static float maxBattery;
-    public static float batteryDecay;
-    public static float moveSpeed;
-    public static float limitVelocity;
-    public static float oxygenDecay;
-    public static float oxygenRegen;
-    public static float maxOxygen;
-    public static float moneyMultiplier;
+    public static float maxBattery = 200f;
+    public static float batteryDecay = 2f;
+    public static float moveSpeed = 1000f;
+    public static float limitVelocity = 10f;
+    public static float oxygenDecay = 5f;
+    public static float oxygenRegen = 5f;
+    public static float maxOxygen = 100f;
+    public static float moneyMultiplier = 1f;
+    public static float subHealth = 100f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

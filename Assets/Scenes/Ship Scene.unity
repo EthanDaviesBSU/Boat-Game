@@ -6150,7 +6150,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d898f194abe354041af7b9daf545b98a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sub: {fileID: 0}
+  healthButton: {fileID: 1066474963}
+  maxBatteryButton: {fileID: 1410581302}
+  maxOxygenButton: {fileID: 812057509}
+  oxygenDecaybutton: {fileID: 1448194065}
+  oxygenRegenButton: {fileID: 1167793423}
+  moveSpeedButton: {fileID: 2020350824}
+  spotlightButton: {fileID: 453235466}
+  auraButton: {fileID: 1551650560}
+  moneyMultiplierButton: {fileID: 1371887777}
 --- !u!4 &2027855255
 Transform:
   m_ObjectHideFlags: 0
