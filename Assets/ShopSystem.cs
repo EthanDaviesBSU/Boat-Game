@@ -10,6 +10,15 @@ public class ShopSystem : MonoBehaviour
     public Button healthButton, maxBatteryButton, maxOxygenButton, oxygenRegenButton, oxygenDecayButton, 
         moveSpeedButton, spotlightButton, auraButton, moneyMultiplierButton;
 
+    public int healthLvl = 1, maxBatteryLvl = 1, maxOxygenLvl = 1, oxygenRegenLvl = 1, oxygenDecayLvl = 1, moveSpeedLvl = 1,
+        spotlightLvl = 1, auraLvl = 1, moneyMultiplierLvl = 1;
+
+    public int healthLvlMax = 10, maxBatteryLvlMax = 10, maxOxygenLvlMax = 10, oxygenRegenLvlMax = 5, oxygenDecayLvlMax = 5,
+        moveSpeedLvlMax = 5, spotlightLvlMax = 5, auraLvlMax = 5, moneyMultiplierLvlMax = 5;
+
+    public TMP_Text healthLvlText, maxBatteryLvlText, maxOxygenLvlText, oxygenRegenLvlText, oxygenDecayLvlText,
+        moveSpeedLvlText, spotlightLvlText, auraLvlText, moneyMultiplierLvlText;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +42,7 @@ public class ShopSystem : MonoBehaviour
     void health()
     {
         ShipStats.subHealth += 10f;
+        healthLvl++;
     }
 
     void battery()
