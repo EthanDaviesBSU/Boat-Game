@@ -477,7 +477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   exitButton: {fileID: 1027862050}
   continueButton: {fileID: 408688439}
-  finalMoney: {fileID: 0}
+  finalMoney: {fileID: 586682205}
 --- !u!4 &726581439
 Transform:
   m_ObjectHideFlags: 0
