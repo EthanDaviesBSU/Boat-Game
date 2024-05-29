@@ -16,4 +16,7 @@ public class ShipStats : MonoBehaviour
     public static float spotlightRange = 15f;
     public static float auraRange = 4f;
     public static float totalMoney = 0f;
+
+    public static int healthLvl = 0, maxBatteryLvl = 0, maxOxygenLvl = 0, oxygenRegenLvl = 0, oxygenDecayLvl = 0, moveSpeedLvl = 0,
+        spotlightLvl = 0, auraLvl = 0, moneyMultiplierLvl = 0;
 }

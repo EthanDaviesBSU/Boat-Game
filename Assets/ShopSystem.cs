@@ -13,9 +13,6 @@ public class ShopSystem : MonoBehaviour
 
     public Button diveButton, exitButton;
 
-    private int healthLvl = 0, maxBatteryLvl = 0, maxOxygenLvl = 0, oxygenRegenLvl = 0, oxygenDecayLvl = 0, moveSpeedLvl = 0,
-        spotlightLvl = 0, auraLvl = 0, moneyMultiplierLvl = 0;
-
     public int healthLvlMax = 10, maxBatteryLvlMax = 10, maxOxygenLvlMax = 10, oxygenRegenLvlMax = 5, oxygenDecayLvlMax = 5,
         moveSpeedLvlMax = 5, spotlightLvlMax = 5, auraLvlMax = 5, moneyMultiplierLvlMax = 5;
 
@@ -38,15 +35,15 @@ public class ShopSystem : MonoBehaviour
         moneyMultiplierButton.onClick.AddListener(money);
         diveButton.onClick.AddListener(dive);
         exitButton.onClick.AddListener(closeGame);
-        healthLvlText.text = healthLvl + " / " + healthLvlMax;
-        maxBatteryLvlText.text = maxBatteryLvl + " / " + maxBatteryLvlMax;
-        maxOxygenLvlText.text = maxOxygenLvl + " / " + maxOxygenLvlMax;
-        oxygenRegenLvlText.text = oxygenRegenLvl + " / " + oxygenRegenLvlMax;
-        oxygenDecayLvlText.text = oxygenDecayLvl + " / " + oxygenDecayLvlMax;
-        moveSpeedLvlText.text = moveSpeedLvl + " / " + moveSpeedLvlMax;
-        spotlightLvlText.text = spotlightLvl + " / " + spotlightLvlMax;
-        auraLvlText.text = auraLvl + " / " + auraLvlMax;
-        moneyMultiplierLvlText.text = moneyMultiplierLvl + " / " + moneyMultiplierLvlMax;
+        healthLvlText.text = ShipStats.healthLvl + " / " + healthLvlMax;
+        maxBatteryLvlText.text = ShipStats.maxBatteryLvl + " / " + maxBatteryLvlMax;
+        maxOxygenLvlText.text = ShipStats.maxOxygenLvl + " / " + maxOxygenLvlMax;
+        oxygenRegenLvlText.text = ShipStats.oxygenRegenLvl + " / " + oxygenRegenLvlMax;
+        oxygenDecayLvlText.text = ShipStats.oxygenDecayLvl + " / " + oxygenDecayLvlMax;
+        moveSpeedLvlText.text = ShipStats.moveSpeedLvl + " / " + moveSpeedLvlMax;
+        spotlightLvlText.text = ShipStats.spotlightLvl + " / " + spotlightLvlMax;
+        auraLvlText.text = ShipStats.auraLvl + " / " + auraLvlMax;
+        moneyMultiplierLvlText.text = ShipStats.moneyMultiplierLvl + " / " + moneyMultiplierLvlMax;
         totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
     }
 
@@ -58,11 +55,11 @@ public class ShopSystem : MonoBehaviour
 
     void health()
     {
-        if (healthLvl != healthLvlMax && (ShipStats.totalMoney - 50) >= 0)
+        if (ShipStats.healthLvl != healthLvlMax && (ShipStats.totalMoney - 50) >= 0)
         {
             ShipStats.subHealth += 10f;
-            healthLvl++;
-            healthLvlText.text = healthLvl + " / " + healthLvlMax;
+            ShipStats.healthLvl++;
+            healthLvlText.text = ShipStats.healthLvl + " / " + healthLvlMax;
             ShipStats.totalMoney -= 50f;
             totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.subHealth);
@@ -71,11 +68,11 @@ public class ShopSystem : MonoBehaviour
 
     void battery()
     {
-        if (maxBatteryLvl != maxBatteryLvlMax && (ShipStats.totalMoney - 50) >= 0)
+        if (ShipStats.maxBatteryLvl != maxBatteryLvlMax && (ShipStats.totalMoney - 50) >= 0)
         {
             ShipStats.maxBattery += 10f;
-            maxBatteryLvl++;
-            maxBatteryLvlText.text = maxBatteryLvl + " / " + maxBatteryLvlMax;
+            ShipStats.maxBatteryLvl++;
+            maxBatteryLvlText.text = ShipStats.maxBatteryLvl + " / " + maxBatteryLvlMax;
             ShipStats.totalMoney -= 50f;
             totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.maxBattery);
@@ -84,11 +81,11 @@ public class ShopSystem : MonoBehaviour
 
     void oxygen()
     {
-        if (maxOxygenLvl != maxOxygenLvlMax && (ShipStats.totalMoney - 50) >= 0)
+        if (ShipStats.maxOxygenLvl != maxOxygenLvlMax && (ShipStats.totalMoney - 50) >= 0)
         {
             ShipStats.maxOxygen += 10f;
-            maxOxygenLvl++;
-            maxOxygenLvlText.text = maxOxygenLvl + " / " + maxOxygenLvlMax;
+            ShipStats.maxOxygenLvl++;
+            maxOxygenLvlText.text = ShipStats.maxOxygenLvl + " / " + maxOxygenLvlMax;
             ShipStats.totalMoney -= 50f;
             totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.maxOxygen);
@@ -97,11 +94,11 @@ public class ShopSystem : MonoBehaviour
 
     void regen()
     {
-        if (oxygenRegenLvl != oxygenRegenLvlMax && (ShipStats.totalMoney - 100) >= 0)
+        if (ShipStats.oxygenRegenLvl != oxygenRegenLvlMax && (ShipStats.totalMoney - 100) >= 0)
         {
             ShipStats.oxygenRegen += 10f;
-            oxygenRegenLvl++;
-            oxygenRegenLvlText.text = oxygenRegenLvl + " / " + oxygenRegenLvlMax;
+            ShipStats.oxygenRegenLvl++;
+            oxygenRegenLvlText.text = ShipStats.oxygenRegenLvl + " / " + oxygenRegenLvlMax;
             ShipStats.totalMoney -= 100f;
             totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.oxygenRegen);
@@ -110,11 +107,11 @@ public class ShopSystem : MonoBehaviour
 
     void decay()
     {
-        if (oxygenDecayLvl != oxygenDecayLvlMax && (ShipStats.totalMoney - 100) >= 0)
+        if (ShipStats.oxygenDecayLvl != oxygenDecayLvlMax && (ShipStats.totalMoney - 100) >= 0)
         {
             ShipStats.oxygenDecay += 10f;
-            oxygenDecayLvl++;
-            oxygenDecayLvlText.text = oxygenDecayLvl + " / " + oxygenDecayLvlMax;
+            ShipStats.oxygenDecayLvl++;
+            oxygenDecayLvlText.text = ShipStats.oxygenDecayLvl + " / " + oxygenDecayLvlMax;
             ShipStats.totalMoney -= 100f;
             totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.oxygenDecay);
@@ -123,12 +120,12 @@ public class ShopSystem : MonoBehaviour
 
     void speed()
     {
-        if (moveSpeedLvl != moveSpeedLvlMax && (ShipStats.totalMoney - 200) >= 0)
+        if (ShipStats.moveSpeedLvl != moveSpeedLvlMax && (ShipStats.totalMoney - 200) >= 0)
         {
             ShipStats.moveSpeed += 100f;
             ShipStats.limitVelocity += 1f;
-            moveSpeedLvl++;
-            moveSpeedLvlText.text = moveSpeedLvl + " / " + moveSpeedLvlMax;
+            ShipStats.moveSpeedLvl++;
+            moveSpeedLvlText.text = ShipStats.moveSpeedLvl + " / " + moveSpeedLvlMax;
             ShipStats.totalMoney -= 200f;
             totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.moveSpeed);
@@ -137,11 +134,11 @@ public class ShopSystem : MonoBehaviour
 
     void spotlight()
     {
-        if (spotlightLvl != spotlightLvlMax && (ShipStats.totalMoney - 200) >= 0)
+        if (ShipStats.spotlightLvl != spotlightLvlMax && (ShipStats.totalMoney - 200) >= 0)
         {
             ShipStats.spotlightRange += 2f;
-            spotlightLvl++;
-            spotlightLvlText.text = spotlightLvl + " / " + spotlightLvlMax;
+            ShipStats.spotlightLvl++;
+            spotlightLvlText.text = ShipStats.spotlightLvl + " / " + spotlightLvlMax;
             ShipStats.totalMoney -= 200f;
             totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.spotlightRange);
@@ -150,11 +147,11 @@ public class ShopSystem : MonoBehaviour
 
     void aura()
     {
-        if (auraLvl != auraLvlMax && (ShipStats.totalMoney - 200) >= 0)
+        if (ShipStats.auraLvl != auraLvlMax && (ShipStats.totalMoney - 200) >= 0)
         {
             ShipStats.auraRange += 1f;
-            auraLvl++;
-            auraLvlText.text = auraLvl + " / " + auraLvlMax;
+            ShipStats.auraLvl++;
+            auraLvlText.text = ShipStats.auraLvl + " / " + auraLvlMax;
             ShipStats.totalMoney -= 200f;
             totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.auraRange);
@@ -163,11 +160,11 @@ public class ShopSystem : MonoBehaviour
 
     void money()
     {
-        if (moneyMultiplierLvl != moneyMultiplierLvlMax && (ShipStats.totalMoney - 500) >= 0)
+        if (ShipStats.moneyMultiplierLvl != moneyMultiplierLvlMax && (ShipStats.totalMoney - 500) >= 0)
         {
             ShipStats.moneyMultiplier += 0.1f;
-            moneyMultiplierLvl++;
-            moneyMultiplierLvlText.text = moneyMultiplierLvl + " / " + moneyMultiplierLvlMax;
+            ShipStats.moneyMultiplierLvl++;
+            moneyMultiplierLvlText.text = ShipStats.moneyMultiplierLvl + " / " + moneyMultiplierLvlMax;
             ShipStats.totalMoney -= 500f;
             totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.moneyMultiplier);

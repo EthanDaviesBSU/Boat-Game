@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SubmarineScene.unity
     guid: 4cadcaa2ee57ab244a7b2385edfc37ea
+  - enabled: 1
+    path: Assets/Scenes/Death Scene.unity
+    guid: 5f6c045d5bfa04f42affe7421697568d
   m_configObjects: {}
