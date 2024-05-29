@@ -77,6 +77,7 @@ public class ShopSystem : MonoBehaviour
             maxBatteryLvl++;
             maxBatteryLvlText.text = maxBatteryLvl + " / " + maxBatteryLvlMax;
             ShipStats.totalMoney -= 50f;
+            totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.maxBattery);
         }
     }
@@ -89,6 +90,7 @@ public class ShopSystem : MonoBehaviour
             maxOxygenLvl++;
             maxOxygenLvlText.text = maxOxygenLvl + " / " + maxOxygenLvlMax;
             ShipStats.totalMoney -= 50f;
+            totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.maxOxygen);
         }
     }
@@ -101,6 +103,7 @@ public class ShopSystem : MonoBehaviour
             oxygenRegenLvl++;
             oxygenRegenLvlText.text = oxygenRegenLvl + " / " + oxygenRegenLvlMax;
             ShipStats.totalMoney -= 100f;
+            totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.oxygenRegen);
         }
     }
@@ -113,6 +116,7 @@ public class ShopSystem : MonoBehaviour
             oxygenDecayLvl++;
             oxygenDecayLvlText.text = oxygenDecayLvl + " / " + oxygenDecayLvlMax;
             ShipStats.totalMoney -= 100f;
+            totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.oxygenDecay);
         }
     }
@@ -126,6 +130,7 @@ public class ShopSystem : MonoBehaviour
             moveSpeedLvl++;
             moveSpeedLvlText.text = moveSpeedLvl + " / " + moveSpeedLvlMax;
             ShipStats.totalMoney -= 200f;
+            totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.moveSpeed);
         }
     }
@@ -138,6 +143,7 @@ public class ShopSystem : MonoBehaviour
             spotlightLvl++;
             spotlightLvlText.text = spotlightLvl + " / " + spotlightLvlMax;
             ShipStats.totalMoney -= 200f;
+            totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.spotlightRange);
         }
     }
@@ -150,6 +156,7 @@ public class ShopSystem : MonoBehaviour
             auraLvl++;
             auraLvlText.text = auraLvl + " / " + auraLvlMax;
             ShipStats.totalMoney -= 200f;
+            totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.auraRange);
         }
     }
@@ -162,6 +169,7 @@ public class ShopSystem : MonoBehaviour
             moneyMultiplierLvl++;
             moneyMultiplierLvlText.text = moneyMultiplierLvl + " / " + moneyMultiplierLvlMax;
             ShipStats.totalMoney -= 500f;
+            totalMoneyText.text = "Money: £ " + ShipStats.totalMoney.ToString("0");
             Debug.Log(ShipStats.moneyMultiplier);
         }
     }
