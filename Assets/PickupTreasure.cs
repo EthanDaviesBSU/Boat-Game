@@ -7,14 +7,12 @@ public class PickupTreasure : MonoBehaviour
 {
 
     public BoxCollider2D player;
-    public float money;
     public TMP_Text moneyText;
 
     // Start is called before the first frame update
     void Start()
     {
         player = GetComponent<BoxCollider2D>();
-        money = 0f;
     }
 
     // Update is called once per frame
@@ -27,18 +25,18 @@ public class PickupTreasure : MonoBehaviour
     {
         if (collision.tag == "Treasure")
         {
-            money += 50f;
+            ShipStats.totalMoney += 50f;
             collision.gameObject.SetActive(false);
             Debug.Log(collision.tag + " Picked Up!");
-            Debug.Log("Money: " + money);
+            Debug.Log("Money: " + ShipStats.totalMoney);
         }
         if (collision.tag == "Big Treasure")
         {
-            money += 100f;
+            ShipStats.totalMoney += 100f;
             collision.gameObject.SetActive(false);
             Debug.Log(collision.tag + " Picked Up!");
 
         }
-        moneyText.text = "£ " + money.ToString("0");
+        moneyText.text = "£ " + ShipStats.totalMoney.ToString("0");
     }
 }
