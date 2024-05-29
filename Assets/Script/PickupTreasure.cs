@@ -9,7 +9,7 @@ public class PickupTreasure : MonoBehaviour
     public BoxCollider2D player;
     public TMP_Text moneyText;
 
-    AudioManager audioManager;
+    public static AudioManager audioManager;
 
     private void Awake()
     {

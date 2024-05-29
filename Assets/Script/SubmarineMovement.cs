@@ -18,13 +18,13 @@ public class SubmarineMovement : MonoBehaviour
 
     public float limitVelocity = 10f;
 
-    //public AudioSource propeller;
+    public AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
-        //propeller = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
 
         // Debug.Log("Max Battery: " + ShipStats.maxBattery);
         // Debug.Log("Battery Decay: " + ShipStats.batteryDecay);
@@ -46,24 +46,17 @@ public class SubmarineMovement : MonoBehaviour
         moveHorizontal = Input.GetAxis("Horizontal");
         moveVertical = Input.GetAxis("Vertical");
 
-        float currentPos = transform.position.y;
-        if (test == currentPos)
+        if (body.velocity.y != 0 || body.velocity.x != 0)
         {
-            isMoving = false;
+            if(!audioSource.isPlaying)
+            {
+                audioSource.Play();
+            }
         }
         else
         {
-            isMoving = true;
+            audioSource.Stop();
         }
-
-        // if (isMoving )
-        // {
-        //     propeller.Play();
-        // }
-        // else
-        // {
-        //     propeller.Stop();
-        // }
     }
 
     void FixedUpdate()
