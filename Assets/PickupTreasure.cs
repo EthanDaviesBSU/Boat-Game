@@ -25,14 +25,14 @@ public class PickupTreasure : MonoBehaviour
     {
         if (collision.tag == "Treasure")
         {
-            ShipStats.totalMoney += 50f;
+            ShipStats.totalMoney += 50f * ShipStats.moneyMultiplier;
             collision.gameObject.SetActive(false);
             Debug.Log(collision.tag + " Picked Up!");
             Debug.Log("Money: " + ShipStats.totalMoney);
         }
         if (collision.tag == "Big Treasure")
         {
-            ShipStats.totalMoney += 100f;
+            ShipStats.totalMoney += 100f * ShipStats.moneyMultiplier;
             collision.gameObject.SetActive(false);
             Debug.Log(collision.tag + " Picked Up!");
 

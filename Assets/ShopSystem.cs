@@ -139,7 +139,7 @@ public class ShopSystem : MonoBehaviour
     {
         if (spotlightLvl != spotlightLvlMax && (ShipStats.totalMoney - 200) >= 0)
         {
-            ShipStats.spotlightRange += 10f;
+            ShipStats.spotlightRange += 2f;
             spotlightLvl++;
             spotlightLvlText.text = spotlightLvl + " / " + spotlightLvlMax;
             ShipStats.totalMoney -= 200f;
@@ -152,7 +152,7 @@ public class ShopSystem : MonoBehaviour
     {
         if (auraLvl != auraLvlMax && (ShipStats.totalMoney - 200) >= 0)
         {
-            ShipStats.auraRange += 10f;
+            ShipStats.auraRange += 1f;
             auraLvl++;
             auraLvlText.text = auraLvl + " / " + auraLvlMax;
             ShipStats.totalMoney -= 200f;
@@ -165,7 +165,7 @@ public class ShopSystem : MonoBehaviour
     {
         if (moneyMultiplierLvl != moneyMultiplierLvlMax && (ShipStats.totalMoney - 500) >= 0)
         {
-            ShipStats.moneyMultiplier += 10f;
+            ShipStats.moneyMultiplier += 0.1f;
             moneyMultiplierLvl++;
             moneyMultiplierLvlText.text = moneyMultiplierLvl + " / " + moneyMultiplierLvlMax;
             ShipStats.totalMoney -= 500f;

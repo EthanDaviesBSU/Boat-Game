@@ -11,6 +11,7 @@ public class MoveLight : MonoBehaviour
     public float RotationSpeed;
     public float LightSpeed;
     public Light2D subLight;
+    public Light2D auraLight;
     public Transform player;
 
     public float maxBattery;
@@ -33,6 +34,9 @@ public class MoveLight : MonoBehaviour
 
         batterySlider.maxValue = ShipStats.maxBattery;
         batterySlider.value = ShipStats.maxBattery;
+
+        auraLight.pointLightOuterRadius = ShipStats.auraRange;
+        auraLight.pointLightInnerRadius = ShipStats.auraRange / 2;
     }
 
     // Update is called once per frame
@@ -45,7 +49,7 @@ public class MoveLight : MonoBehaviour
 
         transform.up = direction;
 
-        if (Input.mouseScrollDelta.y > 0 && subLight.pointLightOuterRadius <= 15 && subLight.pointLightInnerRadius <= 13.35)
+        if (Input.mouseScrollDelta.y > 0 && subLight.pointLightOuterRadius <= ShipStats.spotlightRange && subLight.pointLightInnerRadius <= ShipStats.spotlightRange - 1.65)
         {
             subLight.pointLightOuterRadius += LightSpeed;
             subLight.pointLightInnerRadius += LightSpeed;

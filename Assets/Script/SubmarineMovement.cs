@@ -25,6 +25,19 @@ public class SubmarineMovement : MonoBehaviour
     {
         body = GetComponent<Rigidbody2D>();
         //propeller = GetComponent<AudioSource>();
+
+        // Debug.Log("Max Battery: " + ShipStats.maxBattery);
+        // Debug.Log("Battery Decay: " + ShipStats.batteryDecay);
+        // Debug.Log("Move Speed: " + ShipStats.moveSpeed);
+        // Debug.Log("Limit Velocity: " + ShipStats.limitVelocity);
+        // Debug.Log("Oxygen Decay: " + ShipStats.oxygenDecay);
+        // Debug.Log("Oxygen Regen: " + ShipStats.oxygenRegen);
+        // Debug.Log("Max Oxygen: " + ShipStats.maxOxygen);
+        // Debug.Log("Money Multiplier: " + ShipStats.moneyMultiplier);
+        // Debug.Log("Sub Health: " + ShipStats.subHealth);
+        // Debug.Log("Spotlight Range: " + ShipStats.spotlightRange);
+        // Debug.Log("Aura Range: " + ShipStats.auraRange);
+        // Debug.Log("Total Money: " + ShipStats.totalMoney);
     }
 
     // Update is called once per frame
